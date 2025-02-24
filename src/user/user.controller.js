@@ -12,8 +12,7 @@ export  const defaultUser = async () =>{
         "role": "ADMIN_ROLE",
         "email": "dshgonzalez11@gmail.com",
         "password": "Samedirection14*",
-        "phone": "40191129",
-        "profile-picture": "../../public/uploads/profile-pictures/chichismit.png"
+        "phone": "40191129"
     }
 
     const firstUser = await User.findOne({
