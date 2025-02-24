@@ -1,0 +1,48 @@
+{
+  "name": "interferplatform",
+  "version": "1.0.0",
+  "description": "Api for the management of the interfer platform",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DSHG17/interferPlatform.git"
+  },
+  "keywords": [
+    "interfer",
+    "mongoose",
+    "morgan",
+    "helper",
+    "jwt",
+    "argon2"
+  ],
+  "author": "Derian Hernández",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DSHG17/interferPlatform/issues"
+  },
+  "homepage": "https://github.com/DSHG17/interferPlatform#readme",
+  "dependencies": {
+    "adoptionsystem": "file:",
+    "argon2": "^0.41.1",
+    "cors": "^2.8.5",
+    "date-fns": "^4.1.0",
+    "dotenv": "^16.4.7",
+    "exceljs": "^4.4.0",
+    "express": "^4.21.2",
+    "express-rate-limit": "^7.5.0",
+    "express-validator": "^7.2.1",
+    "helmet": "^8.0.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.9.5",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1",
+    "nodemon": "^3.1.9",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1"
+  }
+}
