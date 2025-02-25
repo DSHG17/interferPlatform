@@ -25,6 +25,7 @@
   "bugs": {
     "url": "https://github.com/DSHG17/interferPlatform/issues"
   },
+  "type":"module",
   "homepage": "https://github.com/DSHG17/interferPlatform#readme",
   "dependencies": {
     "adoptionsystem": "file:",

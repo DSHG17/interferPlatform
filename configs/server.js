@@ -6,6 +6,9 @@ import helmet from "helmet"
 import morgan from "morgan"
 import { dbConnection } from "./mongo.js"
 import { swaggerUi, swaggerDocs } from "./swagger.js"
+import authRoutes from "../src/auth/auth.routes.js"
+import apiLimiter from "../src/middlewares/rate-limit-validator.js"
+
 
 const middlewares = (app) => {
     app.use(express.urlencoded({extended: false}))
@@ -27,10 +30,12 @@ const middlewares = (app) => {
         },
     }));
     app.use(morgan("dev"))
+    app.use(apiLimiter)
 }
 
 const routes = (app) => {
     app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs))
+    app.use("/interfexPlatform/v1/auth", authRoutes)
 }
 
 

@@ -1,3 +1,4 @@
+import { body } from "express-validator";
 import { validateFields } from "./validate-fields.js"
 import { handleErrors } from "./handle-error.js"
 

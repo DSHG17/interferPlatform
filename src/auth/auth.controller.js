@@ -11,8 +11,8 @@ export const login = async (req, res) => {
 
         if(!user){
             return res.status(400).json({
-                message: "Crendenciales inválidas",
-                error:"No existe el usuario o correo ingresado"
+                message: "Iinvalid credentials",
+                error:"An user with that email or username was not found"
             })
         }
 
@@ -20,8 +20,8 @@ export const login = async (req, res) => {
 
         if(!validPassword){
             return res.status(400).json({
-                message: "Crendenciales inválidas",
-                error: "Contraseña incorrecta"
+                message: "Invalid credentials",
+                error: "Wrong password"
             })
         }
 
