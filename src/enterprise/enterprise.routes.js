@@ -1,6 +1,6 @@
 import {Router} from "express"
-import { registerEnterpriseValidator } from "../middlewares/enterprise-validators.js";
-import { registerEnterprise } from "./enterprise.controller.js";
+import { registerEnterpriseValidator, sortEnterprisesAZValidator } from "../middlewares/enterprise-validators.js";
+import { registerEnterprise, sortEnterprisesAZ} from "./enterprise.controller.js";
 
 const router = Router()
 
@@ -44,6 +44,41 @@ router.post(
     "/createEnterprise",
     registerEnterpriseValidator,
     registerEnterprise
+)
+
+
+/**
+ * @swagger
+ * /sortEnterprisesAZ:
+ *   get:
+ *     summary: Retrieve a list of enterprises sorted alphabetically by name
+ *     tags:
+ *       - Enterprises
+ *     parameters:
+ *       - in: query
+ *         name: limite
+ *         description: Number of enterprises to return (default is 10)
+ *         required: false
+ *         schema:
+ *           type: integer
+ *           default: 10
+ *       - in: query
+ *         name: desde
+ *         description: Skip the first N enterprises (default is 0)
+ *         required: false
+ *         schema:
+ *           type: integer
+ *           default: 0
+ *     responses:
+ *       200:
+ *         description: A list of enterprises sorted alphabetically with years of existence
+ *       500:
+ *         description: Error on sorting the enterprises
+ */
+router.get(
+    "/sortEnterprisesAZ",
+    sortEnterprisesAZValidator,
+    sortEnterprisesAZ
 )
 
 export default router

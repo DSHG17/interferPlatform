@@ -56,7 +56,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JkZjllNjkwNWUxMDI2MDFkNGNjODYiLCJpYXQiOjE3NDA1MzUxMzYsImV4cCI6MTc0MDUzODczNn0.3kd5kAxN_NtbGh7-8lZpr3vj7BHm78MHStZgWM8KGL4",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JkZjllNjkwNWUxMDI2MDFkNGNjODYiLCJpYXQiOjE3NDA1NDIxNzUsImV4cCI6MTc0MDU0NTc3NX0.h1qwI_MR05XtQLKfeSje5NuLa9bXdUJsc4DFBdFMmBA",
 									"type": "string"
 								}
 							]
@@ -65,7 +65,120 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"Gomitas el Chino Florian\",\r\n    \"ubication\": \"Carranza lote 73\",\r\n    \"impact\": \"Somos los que inovamos las estrategias de pago de nalga a nalga\",\r\n    \"about\": \"Vendemos las mejores gomitas de carranza para kinal\",\r\n    \"contact\": \"alopez@kinal.edu.gt\",\r\n    \"yearOfCreation\": 2024,\r\n    \"category\": \"Snacks\"\r\n\r\n}",
+							"raw": "{\r\n    \"name\": \"Gomitas el Chino Florian\",\r\n    \"ubication\": \"Carranza lote 73\",\r\n    \"impact\": \"Somos los que inovamos las estrategias de pago de nalga a nalga\",\r\n    \"about\": \"Vendemos las mejores gomitas de carranza para kinal\",\r\n    \"contact\": \"alopez@kinal.edu.gt\",\r\n    \"yearOfCreation\": 2024,\r\n    \"category\": \"Snacks\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/interfexPlatform/v1/enterprise/createEnterprise",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"interfexPlatform",
+								"v1",
+								"enterprise",
+								"createEnterprise"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "sortEnterprisesAZ",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JkZjllNjkwNWUxMDI2MDFkNGNjODYiLCJpYXQiOjE3NDA1NDIxNzUsImV4cCI6MTc0MDU0NTc3NX0.h1qwI_MR05XtQLKfeSje5NuLa9bXdUJsc4DFBdFMmBA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3000/interfexPlatform/v1/enterprise/sortEnterprisesAZ",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"interfexPlatform",
+								"v1",
+								"enterprise",
+								"sortEnterprisesAZ"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createEnterprise 2",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Kampeki Market\",\r\n    \"ubication\": \"Villa neuva\",\r\n    \"impact\": \"Somos la primera tienda completamente autopay\",\r\n    \"about\": \"Somos una tienda de abarrotes completamente sin empleados \",\r\n    \"contact\": \"dshgonzalez11@gmail.com\",\r\n    \"yearOfCreation\": 2024,\r\n    \"category\": \"Supermercado\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/interfexPlatform/v1/enterprise/sortEnterprisesAZ",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"interfexPlatform",
+								"v1",
+								"enterprise",
+								"sortEnterprisesAZ"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createEnterprise 3",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JkZjllNjkwNWUxMDI2MDFkNGNjODYiLCJpYXQiOjE3NDA1NDIxNzUsImV4cCI6MTc0MDU0NTc3NX0.h1qwI_MR05XtQLKfeSje5NuLa9bXdUJsc4DFBdFMmBA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Chupadero la cabaña\",\r\n    \"ubication\": \"Puerto de sanjose\",\r\n    \"impact\": \"Somos el primer chupadero en un chalet en el puerto y ahora es tradición hacerlo\",\r\n    \"about\": \"Nos dedicamos a vender cerveza y servicios de piscina\",\r\n    \"contact\": \"bcoro@gmail.com\",\r\n    \"yearOfCreation\": 2021,\r\n    \"category\": \"Recreación\"\r\n\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"

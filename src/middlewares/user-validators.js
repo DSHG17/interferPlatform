@@ -9,3 +9,4 @@ export const loginValidator = [
     validateFields,
     handleErrors
 ]
+
