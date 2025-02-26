@@ -1,4 +1,5 @@
 import Enterprise from  "./enterprise.model.js"
+import { generateReport } from "../middlewares/excel-upload.js"
 
 export const registerEnterprise = async (req, res) =>{
     try{
@@ -35,6 +36,7 @@ export const sortEnterprisesAZ = async (req,res) =>{
             }
         })
 
+        await generateReport(enterprisesWithAge)
         res.status(200).json({
             success: true,
             enterprises: enterprisesWithAge
@@ -44,7 +46,7 @@ export const sortEnterprisesAZ = async (req,res) =>{
         res.status(500).json({
             success: false,
             message: 'Error on sorting the enterprises',
-            error
+            err: err.message
         })
     }
 }
@@ -65,6 +67,7 @@ export const sortEnterprisesZA = async (req,res) =>{
             }
         })
 
+        await generateReport(enterprisesWithAge)
         res.status(200).json({
             success: true,
             enterprises: enterprisesWithAge
@@ -74,7 +77,7 @@ export const sortEnterprisesZA = async (req,res) =>{
         res.status(500).json({
             success: false,
             message: 'Error on sorting the enterprises',
-            error
+            err: err.message
         })
     }
 }
@@ -95,6 +98,7 @@ export const sortEnterprisesExpirience = async (req,res) =>{
             }
         })
 
+        await generateReport(enterprisesWithAge)
         res.status(200).json({
             success: true,
             enterprises: enterprisesWithAge
@@ -104,7 +108,7 @@ export const sortEnterprisesExpirience = async (req,res) =>{
         res.status(500).json({
             success: false,
             message: 'Error on sorting the enterprises',
-            error
+            err: err.message
         })
     }
 }
@@ -125,7 +129,7 @@ export const updateEnterprise = async (req,res) =>{
         res.status(500).json({
             success: false,
             msg: 'Error while trying to update the Enterprise',
-            error: err.message
+            err: err.message
         })
     }
 }
@@ -147,6 +151,7 @@ export const sortEnterprisesCategory = async (req,res) =>{
             }
         })
 
+        await generateReport(enterprisesWithAge)
         res.status(200).json({
             success: true,
             enterprises: enterprisesWithAge
@@ -156,7 +161,7 @@ export const sortEnterprisesCategory = async (req,res) =>{
         res.status(500).json({
             success: false,
             message: 'Error on sorting the enterprises',
-            err
+            err: err.message
         })
     }
 }
