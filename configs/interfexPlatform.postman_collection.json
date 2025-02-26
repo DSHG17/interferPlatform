@@ -1,0 +1,98 @@
+{
+	"info": {
+		"_postman_id": "f4d974c8-73ed-45f1-9f08-2a06aab99a59",
+		"name": "interfexPlatform",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37585399"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"email\": \"dshgonzalez11@gmail.com\",\r\n        \"password\": \"Samedirection14*\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/interfexPlatform/v1/auth/login",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"interfexPlatform",
+								"v1",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Enterprise",
+			"item": [
+				{
+					"name": "createEnterprise",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JkZjllNjkwNWUxMDI2MDFkNGNjODYiLCJpYXQiOjE3NDA1MzUxMzYsImV4cCI6MTc0MDUzODczNn0.3kd5kAxN_NtbGh7-8lZpr3vj7BHm78MHStZgWM8KGL4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Gomitas el Chino Florian\",\r\n    \"ubication\": \"Carranza lote 73\",\r\n    \"impact\": \"Somos los que inovamos las estrategias de pago de nalga a nalga\",\r\n    \"about\": \"Vendemos las mejores gomitas de carranza para kinal\",\r\n    \"contact\": \"alopez@kinal.edu.gt\",\r\n    \"yearOfCreation\": 2024,\r\n    \"category\": \"Snacks\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/interfexPlatform/v1/enterprise/createEnterprise",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"interfexPlatform",
+								"v1",
+								"enterprise",
+								"createEnterprise"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

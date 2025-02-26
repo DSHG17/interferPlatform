@@ -8,7 +8,7 @@ const enterpriseSchema = Schema({
     },
     ubication:{
         type: String,
-        required: [true, "Unibication is required"],
+        required: [true, "Ubication is required"],
         maxLength: [70, "Ubication cannot exceed 70 characters"]
     },
     impact:{

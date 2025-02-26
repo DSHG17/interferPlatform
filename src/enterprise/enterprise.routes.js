@@ -7,10 +7,11 @@ const router = Router()
 
 /**
  * @swagger
- * /createEnterpise:
+ * /createEnterprise:
  *   post:
  *     summary: Create enterprise for the admins
- *     tags: [Enterprise]
+ *     tags:
+ *       - Enterprise
  *     requestBody:
  *       required: true
  *       content:
@@ -24,12 +25,12 @@ const router = Router()
  *                 type: string
  *               impact:
  *                 type: string
- *               about: 
+ *               about:
  *                 type: string
  *               contact:
  *                 type: string
  *               yearOfCreation:
- *                 type: Number
+ *                 type: integer
  *               category:
  *                 type: string
  *     responses:
@@ -37,7 +38,8 @@ const router = Router()
  *         description: Enterprise created
  *       500:
  *         description: Enterprise registration failed
- **/
+ */
+
 router.post(
     "/createEnterprise",
     registerEnterpriseValidator,
