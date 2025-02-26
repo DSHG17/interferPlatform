@@ -1,6 +1,6 @@
 import {Router} from "express"
-import { registerEnterpriseValidator, sortEnterprisesAZValidator, sortEnterprisesZAValidator } from "../middlewares/enterprise-validators.js";
-import { registerEnterprise, sortEnterprisesAZ,sortEnterprisesZA} from "./enterprise.controller.js";
+import { registerEnterpriseValidator, sortEnterprisesValidator } from "../middlewares/enterprise-validators.js";
+import { registerEnterprise, sortEnterprisesAZ,sortEnterprisesZA, sortEnterprisesExpirience} from "./enterprise.controller.js";
 
 const router = Router()
 
@@ -77,7 +77,7 @@ router.post(
  */
 router.get(
     "/sortEnterprisesAZ",
-    sortEnterprisesAZValidator,
+    sortEnterprisesValidator,
     sortEnterprisesAZ
 )
 
@@ -111,8 +111,43 @@ router.get(
  */
 router.get(
     "/sortEnterprisesZA",
-    sortEnterprisesZAValidator,
+    sortEnterprisesValidator,
     sortEnterprisesZA
 )
+
+/**
+ * @swagger
+ * /sortEnterprisesZA:
+ *   get:
+ *     summary: Retrieve a list of enterprises sorted from expirience
+ *     tags:
+ *       - Enterprises
+ *     parameters:
+ *       - in: query
+ *         name: limite
+ *         description: Number of enterprises to return (default is 10)
+ *         required: false
+ *         schema:
+ *           type: integer
+ *           default: 10
+ *       - in: query
+ *         name: desde
+ *         description: Skip the first N enterprises (default is 0)
+ *         required: false
+ *         schema:
+ *           type: integer
+ *           default: 0
+ *     responses:
+ *       200:
+ *         description: A list of enterprises sorted from expirience
+ *       500:
+ *         description: Internal server error
+ */
+router.get(
+    "/sortEnterprisesExpirience",
+    sortEnterprisesValidator,
+    sortEnterprisesExpirience
+)
+
 
 export default router

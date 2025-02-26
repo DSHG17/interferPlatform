@@ -20,16 +20,10 @@ export const registerEnterpriseValidator = [
     handleErrors
 ]
 
-export const sortEnterprisesAZValidator = [
+export const sortEnterprisesValidator = [
     validateJWT,
     hasRoles("ADMIN_ROLE"),
     validateFields,
     handleErrors  
 ]
 
-export const sortEnterprisesZAValidator = [
-    validateJWT,
-    hasRoles("ADMIN_ROLE"),
-    validateFields,
-    handleErrors  
-]
