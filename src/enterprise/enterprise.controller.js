@@ -129,3 +129,34 @@ export const updateEnterprise = async (req,res) =>{
         })
     }
 }
+
+export const sortEnterprisesCategory = async (req,res) =>{
+    const { limite = 10, desde = 0 } = req.query
+    const {category} = req.body
+    try{
+        const enterprises = await Enterprise.find({category})
+        .skip(Number(desde))
+        .limit(Number(limite))
+
+        const enterprisesWithAge = enterprises.map((enterprise) => {
+            const currentYear = new Date().getFullYear()
+            const yearsOfExistence = currentYear - enterprise.yearOfCreation 
+            return {
+                ...enterprise.toObject(),
+                yearsOfExistence
+            }
+        })
+
+        res.status(200).json({
+            success: true,
+            enterprises: enterprisesWithAge
+        })
+        
+    }catch(err){
+        res.status(500).json({
+            success: false,
+            message: 'Error on sorting the enterprises',
+            err
+        })
+    }
+}

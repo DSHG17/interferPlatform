@@ -1,6 +1,6 @@
 import {Router} from "express"
 import { registerEnterpriseValidator, sortEnterprisesValidator, updateEnterpriseValidator } from "../middlewares/enterprise-validators.js";
-import { registerEnterprise, sortEnterprisesAZ,sortEnterprisesZA, sortEnterprisesExpirience, updateEnterprise} from "./enterprise.controller.js";
+import { registerEnterprise, sortEnterprisesAZ,sortEnterprisesZA, sortEnterprisesExpirience, updateEnterprise, sortEnterprisesCategory} from "./enterprise.controller.js";
 
 const router = Router()
 
@@ -114,12 +114,11 @@ router.get(
     sortEnterprisesValidator,
     sortEnterprisesZA
 )
-
 /**
  * @swagger
- * /sortEnterprisesZA:
+ * /sortEnterprisesExpirience:
  *   get:
- *     summary: Retrieve a list of enterprises sorted from expirience
+ *     summary: Retrieve a list of enterprises sorted by experience
  *     tags:
  *       - Enterprises
  *     parameters:
@@ -139,7 +138,7 @@ router.get(
  *           default: 0
  *     responses:
  *       200:
- *         description: A list of enterprises sorted from expirience
+ *         description: A list of enterprises sorted by experience
  *       500:
  *         description: Internal server error
  */
@@ -195,6 +194,52 @@ router.put(
     "/updateEnterprise/:eid",
     updateEnterpriseValidator,
     updateEnterprise
+)
+
+/**
+ * @swagger
+ * /sortEnterprisesCategory:
+ *   get:
+ *     summary: Retrieve a list of enterprises sorted by category
+ *     tags:
+ *       - Enterprises
+ *     parameters:
+ *       - in: query
+ *         name: limite
+ *         description: Number of enterprises to return (default is 10)
+ *         required: false
+ *         schema:
+ *           type: integer
+ *           default: 10
+ *       - in: query
+ *         name: desde
+ *         description: Skip the first N enterprises (default is 0)
+ *         required: false
+ *         schema:
+ *           type: integer
+ *           default: 0
+ *       - in: body
+ *         name: category
+ *         description: Category to filter enterprises by (e.g. "food")
+ *         required: true
+ *         schema:
+ *           type: object
+ *           properties:
+ *             category:
+ *               type: string
+ *               example: food
+ *     responses:
+ *       200:
+ *         description: A list of enterprises sorted by category
+ *       400:
+ *         description: Missing category in request body
+ *       500:
+ *         description: Internal server error
+ */
+router.get(
+    "/sortEnterprisesCategory",
+    sortEnterprisesValidator,
+    sortEnterprisesCategory
 )
 
 

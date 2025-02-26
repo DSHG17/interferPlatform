@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "f4d974c8-73ed-45f1-9f08-2a06aab99a59",
+		"_postman_id": "aab9c741-eac9-4b4c-ba5f-d126061ffaae",
 		"name": "interfexPlatform",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "37585399"
+		"_exporter_id": "42000110"
 	},
 	"item": [
 		{
@@ -56,7 +56,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JkZjllNjkwNWUxMDI2MDFkNGNjODYiLCJpYXQiOjE3NDA1NDIxNzUsImV4cCI6MTc0MDU0NTc3NX0.h1qwI_MR05XtQLKfeSje5NuLa9bXdUJsc4DFBdFMmBA",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JjZmIxZWM2ZWE0ZjA0N2NiNjhkYzUiLCJpYXQiOjE3NDA1OTgwMjEsImV4cCI6MTc0MDYwMTYyMX0.55khcockgWOMqQBAuUPlA-yyNWdHMxedH43uGOYepa4",
 									"type": "string"
 								}
 							]
@@ -213,7 +213,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JkZjllNjkwNWUxMDI2MDFkNGNjODYiLCJpYXQiOjE3NDA1NDIxNzUsImV4cCI6MTc0MDU0NTc3NX0.h1qwI_MR05XtQLKfeSje5NuLa9bXdUJsc4DFBdFMmBA",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JjZmIxZWM2ZWE0ZjA0N2NiNjhkYzUiLCJpYXQiOjE3NDA1OTgwMjEsImV4cCI6MTc0MDYwMTYyMX0.55khcockgWOMqQBAuUPlA-yyNWdHMxedH43uGOYepa4",
 									"type": "string"
 								}
 							]
@@ -315,6 +315,53 @@
 								"enterprise",
 								"updateEnterprise",
 								"67be76e704bccf649b42841a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "sortEnterprisesCategory",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JjZmIxZWM2ZWE0ZjA0N2NiNjhkYzUiLCJpYXQiOjE3NDA1OTgwMjEsImV4cCI6MTc0MDYwMTYyMX0.55khcockgWOMqQBAuUPlA-yyNWdHMxedH43uGOYepa4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"category\": \"Snacks\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/interfexPlatform/v1/enterprise/sortEnterprisesCategory",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"interfexPlatform",
+								"v1",
+								"enterprise",
+								"sortEnterprisesCategory"
 							]
 						}
 					},
