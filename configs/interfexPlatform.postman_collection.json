@@ -204,6 +204,41 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "sortEnterprisesZA",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JkZjllNjkwNWUxMDI2MDFkNGNjODYiLCJpYXQiOjE3NDA1NDIxNzUsImV4cCI6MTc0MDU0NTc3NX0.h1qwI_MR05XtQLKfeSje5NuLa9bXdUJsc4DFBdFMmBA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3000/interfexPlatform/v1/enterprise/sortEnterprisesZA",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"interfexPlatform",
+								"v1",
+								"enterprise",
+								"sortEnterprisesZA"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		}

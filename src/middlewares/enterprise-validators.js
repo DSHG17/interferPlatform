@@ -26,3 +26,10 @@ export const sortEnterprisesAZValidator = [
     validateFields,
     handleErrors  
 ]
+
+export const sortEnterprisesZAValidator = [
+    validateJWT,
+    hasRoles("ADMIN_ROLE"),
+    validateFields,
+    handleErrors  
+]
