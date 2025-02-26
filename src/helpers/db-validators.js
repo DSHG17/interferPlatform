@@ -21,3 +21,11 @@ export const enterpriseNameExits = async (name = "") =>{
         throw new Error(`The name of the enterprise ${name} is already registered`)
     }
 }
+
+export const enterpriseExists = async (eid = " ") => {
+    const existe = await Enterprise.findById(eid)
+    console.log(existe)
+    if(!existe){
+        throw new Error("Not enterprise found with the id")
+    }
+}

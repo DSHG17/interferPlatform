@@ -1,6 +1,6 @@
 import {Router} from "express"
-import { registerEnterpriseValidator, sortEnterprisesValidator } from "../middlewares/enterprise-validators.js";
-import { registerEnterprise, sortEnterprisesAZ,sortEnterprisesZA, sortEnterprisesExpirience} from "./enterprise.controller.js";
+import { registerEnterpriseValidator, sortEnterprisesValidator, updateEnterpriseValidator } from "../middlewares/enterprise-validators.js";
+import { registerEnterprise, sortEnterprisesAZ,sortEnterprisesZA, sortEnterprisesExpirience, updateEnterprise} from "./enterprise.controller.js";
 
 const router = Router()
 
@@ -147,6 +147,54 @@ router.get(
     "/sortEnterprisesExpirience",
     sortEnterprisesValidator,
     sortEnterprisesExpirience
+)
+
+/**
+ * @swagger
+ * /updateEnterprise/{eid}:
+ *   put:
+ *     summary: Update an enterprise by its ID
+ *     tags:
+ *       - Enterprises
+ *     parameters:
+ *       - in: path
+ *         name: eid
+ *         description: The ID of the enterprise to update
+ *         required: true
+ *         schema:
+ *           type: string
+ *           example: "607c72ef1c0b6b001f7a6e8e"
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             properties:
+ *               name:
+ *                 type: string
+ *               ubication:
+ *                 type: string
+ *               impact:
+ *                 type: string
+ *               about:
+ *                 type: string
+ *               contact:
+ *                 type: string
+ *               yearOfCreation:
+ *                 type: integer
+ *               category:
+ *                 type: string
+ *     responses:
+ *       200:
+ *         description: Enterprise updated successfully
+ *       500:
+ *         description: Internal server error
+ */
+router.put(
+    "/updateEnterprise/:eid",
+    updateEnterpriseValidator,
+    updateEnterprise
 )
 
 

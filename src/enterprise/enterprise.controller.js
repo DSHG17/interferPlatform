@@ -108,3 +108,24 @@ export const sortEnterprisesExpirience = async (req,res) =>{
         })
     }
 }
+
+export const updateEnterprise = async (req,res) =>{
+    try {
+        const {eid} = req.params
+        const data = req.body
+
+        const updatedEnterprise= await Enterprise.findByIdAndUpdate(eid, data, { new: true })
+
+        res.status(200).json({
+            success: true,
+            msg: 'Enterprise Updated',
+            enterprise: updatedEnterprise,
+        });
+    } catch (err) {
+        res.status(500).json({
+            success: false,
+            msg: 'Error while trying to update the Enterprise',
+            error: err.message
+        })
+    }
+}

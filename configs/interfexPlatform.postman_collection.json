@@ -274,6 +274,51 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "updateEnterprise",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JkZjllNjkwNWUxMDI2MDFkNGNjODYiLCJpYXQiOjE3NDA1NDY1NjgsImV4cCI6MTc0MDU1MDE2OH0.yLUGSe_a3MT7lXM5IGzwVIeh2BZHOuq9nXEhRFW0aPw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Gomitas Anderson Lopez\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/interfexPlatform/v1/enterprise/updateEnterprise/67be76e704bccf649b42841a",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"interfexPlatform",
+								"v1",
+								"enterprise",
+								"updateEnterprise",
+								"67be76e704bccf649b42841a"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		}
