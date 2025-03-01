@@ -1,0 +1,48 @@
+[{
+  "_id": {
+    "$oid": "67be76e704bccf649b42841a"
+  },
+  "name": "Gomitas Anderson Lopez",
+  "ubication": "Carranza lote 73",
+  "impact": "Somos los que inovamos las estrategias de pago de nalga a nalga",
+  "about": "Vendemos las mejores gomitas de carranza para kinal",
+  "contact": "alopez@kinal.edu.gt",
+  "yearOfCreation": 2024,
+  "category": "Snacks"
+},
+{
+  "_id": {
+    "$oid": "67be91738c3b807802ac5809"
+  },
+  "name": "Kampeki Market",
+  "ubication": "Villa neuva",
+  "impact": "Somos la primera tienda completamente autopay",
+  "about": "Somos una tienda de abarrotes completamente sin empleados ",
+  "contact": "dshgonzalez11@gmail.com",
+  "yearOfCreation": 2024,
+  "category": "Supermercado"
+},
+{
+  "_id": {
+    "$oid": "67be91c18c3b807802ac581f"
+  },
+  "name": "Abejas",
+  "ubication": "Villa neuva",
+  "impact": "Waza",
+  "about": "s",
+  "contact": "dshgonzalez21@gmail.com",
+  "yearOfCreation": 2024,
+  "category": "Supermercado"
+},
+{
+  "_id": {
+    "$oid": "67be96f183f86d404df85984"
+  },
+  "name": "Chupadero la cabaña",
+  "ubication": "Puerto de sanjose",
+  "impact": "Somos el primer chupadero en un chalet en el puerto y ahora es tradición hacerlo",
+  "about": "Nos dedicamos a vender cerveza y servicios de piscina",
+  "contact": "bcoro@gmail.com",
+  "yearOfCreation": 2021,
+  "category": "Recreación"
+}]
